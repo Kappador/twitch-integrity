@@ -1,6 +1,6 @@
 {
   "name": "twitch-integrity",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simplifies the process of obtaining the integrity token for the Twitch GQL API",
   "main": "index.js",
   "scripts": {},
