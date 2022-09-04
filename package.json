@@ -1,0 +1,32 @@
+{
+  "name": "twitch-integrity",
+  "version": "1.0.0",
+  "description": "Simplifies the process of obtaining the integrity token for the Twitch GQL API",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kappador/twitch-integrity.git"
+  },
+  "keywords": [
+    "twitch",
+    "gql",
+    "integrity",
+    "authentication",
+    "token",
+    "security",
+    "graphql",
+    "api"
+  ],
+  "author": "Kappador <kappador@kappa.host> (https://kappa.host)",
+  "bugs": {
+    "url": "https://github.com/Kappador/twitch-integrity/issues"
+  },
+  "homepage": "https://github.com/Kappador/twitch-integrity",
+  "license": "MIT",
+  "dependencies": {
+    "needle": "^3.1.0",
+    "proxy-agent": "^5.0.0",
+    "random-useragent": "^0.5.0"
+  }
+}
