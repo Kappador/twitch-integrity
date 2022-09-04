@@ -1,7 +1,7 @@
 const randomUseragent = require('random-useragent');
 const needle = require('needle');
 
-module.exports.getIntegrity = function (token = null, agent = false, userAgent = null, deviceId = null) {
+module.exports.getIntegrity = function (token = null, agent = false, deviceId = null, userAgent = null) {
     return new Promise((resolve, reject) => {
 
         const header = getTwitchHeader(token);

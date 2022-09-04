@@ -110,11 +110,11 @@ Generates an anonymous integrity token
 Example Result:
 ```javascript
 {
-    error: false,
-    token: "v4.public.e30=",
-    device: "289b553fe214137b",
-    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/
-    oauth: null
+    "error": false,
+    "token": "v4.public.e30=",
+    "device": "289b553fe214137b",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/
+    "oauth": null
 }
 ```
 
