@@ -4,7 +4,7 @@ const needle = require('needle');
 module.exports.getIntegrity = function (token = null, agent = false, deviceId = null, userAgent = null) {
     return new Promise((resolve, reject) => {
 
-        const header = getTwitchHeader(token);
+        const header = getTwitchHeader(token, null, deviceId, userAgent);
         needle("post", "https://gql.twitch.tv/integrity", {}, {
             headers: header,
             agent: agent,
@@ -24,7 +24,6 @@ module.exports.getIntegrity = function (token = null, agent = false, deviceId = 
 }
 
 function getTwitchHeader(token = null, integrity = null, deviceId = null, userAgent = null) {
-    let did = deviceId ?? "".concat(Math.random().toString(36).substring(2, 15), Math.random().toString(36).substring(2, 15));
     const header = {
         Accept: "*/*",
         "Accept-Encoding": "gzip, deflate, br",
@@ -33,11 +32,10 @@ function getTwitchHeader(token = null, integrity = null, deviceId = null, userAg
         "Client-Integrity": integrity ?? null,
         Connection: "keep-alive",
         "Content-Type": "text/plain; charset=UTF-8",
-        "Device-ID": did,
-        "X-Device-ID": did,
+        "Device-ID": deviceId ?? "".concat(Math.random().toString(36).substring(2, 15), Math.random().toString(36).substring(2, 15)),
         Origin: "https://www.twitch.tv",
         Referer: "https://www.twitch.tv/",
-        Authorization: token ?? null,
+        Authorization: token ? "OAuth ".concat(token) : null,
         "Sec-Fetch-Dest": "empty",
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Site": "same-site",
